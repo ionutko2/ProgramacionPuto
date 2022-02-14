@@ -1,0 +1,20 @@
+package Tres;
+import java.util.Scanner;
+public class Jefe extends Empleado {
+	final int plus;
+	String nombreDepartamento;
+	Jefe() {
+		plus = 250;
+		nombreDepartamento = "";
+	}
+	void pedirDatos() {
+		Scanner teclado = new Scanner(System.in);
+		super.pedirDatos();
+		System.out.println("Escriba el departamento en el que trabaja:");
+		nombreDepartamento = teclado.nextLine();
+	}
+	void imprimirDatos() {
+		super.imprimirDatos();
+		System.out.println(" Nombre del departamento: " + nombreDepartamento + " Plus: " + plus);
+	}
+}
