@@ -9,10 +9,12 @@ public class CincoPrueba extends Cinco {
 			no se puede crear un atributo con el modificador abstract*/
 		 
 
-	}/*
-	 abstract int multiplicacion(int i, int j);
-	 al crear un metodo abstracto en la clase CincoPrueba me da error porque
-	 la clase no es abstracta*/
+	}
+	int multiplicacion(int i, int j) {
+		int multiplicacion;
+		multiplicacion = i * j;
+		return multiplicacion;
+	}
 	
 	/*int resta(int i, int j) {
 		int resta;
