@@ -7,6 +7,7 @@ public class Dividir {
 	private String dividendo;
 	private int dividir;
 	private boolean error = false;
+	private boolean error1 = false;
 	Scanner teclado = new Scanner(System.in);
 	
 	Dividir(){
@@ -38,23 +39,26 @@ public class Dividir {
 		}
 		catch (InputMismatchException e1) {
 			System.out.println("Si es que te daba con la bara hasta partirte la espaldax2");
+			error1 = true;
 		}
 		
 	}
 	void dividir(){
-		if ( divisor == 0 ) {
-			try {
-				dividir = Integer.parseInt(dividendo)/divisor;
-				System.out.println(dividir);
-			}
-			catch (ArithmeticException e) {
-				System.out.println("A ver alma de cántaro, ¿cómo coño vas a dividir entre cero?");
-			}
-		}else {
+		if ( error1 ) {
 			dividir = Integer.parseInt(dividendo)/divisor;
 			System.out.println(dividir);
+			
 		}
-		
-	}
+		else {
+			try {
+					dividir = Integer.parseInt(dividendo)/divisor;
+					System.out.println(dividir);
+				}
+				catch (ArithmeticException e) {
+					System.out.println("A ver alma de cántaro, ¿cómo coño vas a dividir entre cero?");
+				}
+			
+			}
+		}
 }
 
